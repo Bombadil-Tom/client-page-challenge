@@ -1,5 +1,10 @@
 # Client Page Challenge, Frontend Exercise
 
+## How to start 
+
+I used the `create-react-app` package for this challange. In order to start my app locally simply run `npm i` and `npm run start`.
+Below I posted a couple of my thoughts. 
+
 ## Database scheme
 
 * Since PostgreSQL as a database was mentioned I'm assuming there would be tables for `Company`, `VisaType` and `Client`:
