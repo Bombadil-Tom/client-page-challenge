@@ -73,11 +73,11 @@ const [clients, setClients] = useState([]);
 ```
 
 ## Components and Container logic
-* I chose the components and container logic. That way in a bigger app static elements such as a Navigationbar/Sidebar 
+* I chose the components/presentational and container logic. That way in a bigger app repeating elements such as a Navigationbar/Sidebar 
 or Header can live in containers while presentational elements will live in the component structure. 
-* It could be argued that the api call currently living in the `componentDidMount()` of `ClientPage.tsx` could be moved 
-to the container level to keep the components more "dumb". The state would then be living in the container and be 
-passed down as props to the component. Functions to manipulate the data would also have to be passed down.  
+* Additionally, the container will be smart and handle the API calls and data manipulatin while the presentational components 
+remain stateless. 
+* It could be argued that `ChildPage.tsx` should be turned into a functional component.
 
 ## Sorting
 
