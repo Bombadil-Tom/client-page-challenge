@@ -62,7 +62,7 @@ src/actions
   * imo easier to understand what happens when (`componentDidMount`, `componentDidUpdate`, `componentWillUnmount` vs `useEffect`)
   * imo more OOP friendly
 
-* If hooks instead of component lifecycles were used, the `useEffect` will replace `componentDidMount` and `componentDidUpdate` in `ClientPage.tsx`.
+* If hooks instead of component lifecycles were used, the `useEffect` will replace `componentDidMount` and `componentDidUpdate` in `ClientPageContainer.tsx`.
 
 ```
 import { useEffect, useState } from 'react';
