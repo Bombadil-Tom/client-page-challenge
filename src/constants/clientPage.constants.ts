@@ -1,0 +1,5 @@
+export const clientPageConstants = {
+    LIST_CLIENTS: 'LIST_CLIENTS',
+    LIST_CLIENTS_FULFILLED: 'LIST_CLIENTS_FULFILLED',
+    LIST_CLIENTS_ERROR: 'LIST_CLIENTS_ERROR'
+} as const;
