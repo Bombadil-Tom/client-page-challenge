@@ -57,7 +57,7 @@ src/actions
   * imo easier to understand what happens when (`componentDidMount`, `componentDidUpdate`, `componentWillUnmount` vs `useEffect`)
   * imo more OOP friendly
 
-* If hooks instead of component lifecycles were used, the `useEffect` could have replaced `componentDidMount` and `componentDidUpdate` in `ClientPage.tsx`.
+* If hooks instead of component lifecycles were used, the `useEffect` will replace `componentDidMount` and `componentDidUpdate` in `ClientPage.tsx`.
 
 ```
 import { useEffect, useState } from 'react';
@@ -75,7 +75,7 @@ const [clients, setClients] = useState([]);
 ## Components and Container logic
 * I chose the components/presentational and container logic. That way in a bigger app repeating elements such as a Navigationbar/Sidebar 
 or Header can live in containers while presentational elements will live in the component structure. 
-* Additionally, the container will be smart and handle the API calls and data manipulatin while the presentational components 
+* Additionally, the container will be smart and handle the API calls and data manipulation while the presentational components 
 remain stateless. 
 * It could be argued that `ChildPage.tsx` should be turned into a functional component.
 
