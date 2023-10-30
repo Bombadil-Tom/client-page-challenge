@@ -66,9 +66,16 @@ const ClientPage = (props) => {
 const [clients, setClients] = useState([]);
 
     useEffect(() => {
-        props.clientPageActions.listClients();
-        setClients(props.clientPageReducer.data);
-    }, [props.clientPageReducer.data]); 
+        const fetchData = async () => {
+            await props.clientPageActions.listClients();
+            // Update state only if the data has changed
+            if (props.clientPageReducer.data !== clients) {
+                setClients(props.clientPageReducer.data);
+            }
+        };
+
+        fetchData();
+    }, [props.clientPageReducer.data]);
 }
 ```
 
