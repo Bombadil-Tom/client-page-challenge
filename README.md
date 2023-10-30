@@ -42,7 +42,7 @@ export const listClientsAPI = (): Promise<any> => {
 
 ## Redux 
 
-* I added redux for state management:
+* A bigger app in mind I added redux for state management (but is probably overkill for a small project):
 
 ```
 src/store
@@ -71,6 +71,13 @@ const [clients, setClients] = useState([]);
     }, [props.clientPageReducer.data]); 
 }
 ```
+
+## Components and Container logic
+* I chose the components and container logic. That way in a bigger app static elements such as a Navigationbar/Sidebar 
+or Header can live in containers while presentational elements will live in the component structure. 
+* It could be argued that the api call currently living in the `componentDidMount()` of `ClientPage.tsx` could be moved 
+to the container level to keep the components more "dumb". The state would then be living in the container and be 
+passed down as props to the component. Functions to manipulate the data would also have to be passed down.  
 
 ## Sorting
 
